@@ -60,6 +60,14 @@
     <Compile Include="Pages\SliderEntryLabelBindingsPage.xaml.cs">
       <DependentUpon>SliderEntryLabelBindingsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StartMenu\MenuGroup.cs" />
+    <Compile Include="StartMenu\MenuItem.cs" />
+    <Compile Include="StartMenu\StartOptionsPage.xaml.cs">
+      <DependentUpon>StartOptionsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StartMenu\StartPage.xaml.cs">
+      <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -113,6 +121,14 @@
     <Page Include="Pages\ListWithTextCellPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StartMenu\StartOptionsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StartMenu\StartPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:startMenu="clr-namespace:XFViews.StartMenu;assembly=XFViews"
+                  xmlns:pages="clr-namespace:XFViews.Pages;assembly=XFViews"
+                  x:Class="XFViews.StartMenu.StartPage">
+  <MasterDetailPage.Master>
+    <startMenu:StartOptionsPage x:Name="MasterPage" />
+  </MasterDetailPage.Master>
+  
+  <MasterDetailPage.Detail>
+    <pages:ActivityIndicatorAndButtonPage />
+  </MasterDetailPage.Detail>
+</MasterDetailPage>
