@@ -35,10 +35,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Data\Escalacao.cs" />
+    <Compile Include="Data\Jogador.cs" />
     <Compile Include="Pages\ActivityIndicatorAndButtonPage.xaml.cs">
       <DependentUpon>ActivityIndicatorAndButtonPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.cs" />
+    <Compile Include="Pages\ListasTabbedPage.xaml.cs">
+      <DependentUpon>ListasTabbedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListsTabbedPage.xaml.cs">
+      <DependentUpon>ListsTabbedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListWithCustomCellsPage.xaml.cs">
+      <DependentUpon>ListWithCustomCellsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListWithTextCellPage.xaml.cs">
+      <DependentUpon>ListWithTextCellPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PopUpsPage.xaml.cs">
       <DependentUpon>PopUpsPage.xaml</DependentUpon>
     </Compile>
@@ -82,6 +96,24 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Pages\ListasTabbedPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ListsTabbedPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ListWithCustomCellsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ListWithTextCellPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

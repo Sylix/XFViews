@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFViews.Pages.ListWithCustomCellsPage">
+  
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness">
+      <OnPlatform.Android>8</OnPlatform.Android>
+      <OnPlatform.iOS>10, 30, 10, 10</OnPlatform.iOS>
+      <OnPlatform.WinPhone>20</OnPlatform.WinPhone>
+    </OnPlatform>
+  </ContentPage.Padding>
+      
+    <ContentPage.Content>
+      <StackLayout VerticalOptions="FillAndExpand">
+        <Label
+				  Text="Escalação"
+				  VerticalOptions="Center"
+          FontSize="35"
+				  HorizontalOptions="Center" />
+        <ListView x:Name="JogadoresList" CachingStrategy="RecycleElement">
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <Grid>
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="15"/>
+                  </Grid.RowDefinitions>
+
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="12"/>
+                    <ColumnDefinition Width="*"/>
+                  </Grid.ColumnDefinitions>
+            
+                  <Label Grid.RowSpan="2" Text="{Binding Numero}" FontSize="32" VerticalOptions="Center" HorizontalTextAlignment="End"/>
+                  <Label Grid.Row="0" Grid.Column="2" Text="{Binding Nome}" FontSize="16" VerticalOptions="End" VerticalTextAlignment="End"/>
+                  <Label Grid.Row="1" Grid.Column="2" Text="{Binding Posicao}" FontSize="10" VerticalOptions="Start" VerticalTextAlignment="Start"/>
+            
+                </Grid>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+      </StackLayout>
+    </ContentPage.Content>
+  </ContentPage>
